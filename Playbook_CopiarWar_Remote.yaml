@@ -2,7 +2,7 @@
 - hosts: servidores
   become: true
   tasks:
-    - name: Copiando WAR remotamente al Server Docker
+    - name: Copia WAR remotamente al Servidor Docker
       copy:
         src: /home/ansibleadmin/carpeta_de_wars/devops-vinceup-hell-yeah.war
         dest: /home/ansibleadmin/carpeta_de_wars/
