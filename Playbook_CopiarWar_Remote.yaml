@@ -5,7 +5,4 @@
     - name: Copia WAR remotamente al Servidor Docker
       copy:
         src: /home/ansibleadmin/carpeta_de_wars/devops-vinceup-hell-yeah.war
-        dest: /home/ansibleadmin/carpeta_de_wars/
-        owner: ansibleadmin
-        group: sudo
-        mode: 0644
+        dest: /home/dockeradmin/carpeta_de_wars/
