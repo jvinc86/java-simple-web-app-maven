@@ -1,5 +1,5 @@
 ---
-- hosts: servidores
+- hosts: kubernetes
   become: true
   tasks:
     - name: Copia WAR remotamente al Servidor Docker
