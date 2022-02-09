@@ -1,11 +1,11 @@
 apiVersion: apps/v1 # para versiones antes de 1.9.0 usar apps/v1beta2
 kind: Deployment
 metadata:
-  name: adele-deployment
+  name: rihanna-deployment
 spec:
   selector:
     matchLabels:
-      app: adele-proyecto
+      app: rihanna-proyecto
   replicas: 1 # dice que corra 1 pod usando como modelo el template abajo
   strategy:
     type: RollingUpdate
@@ -16,11 +16,11 @@ spec:
   template:
     metadata:
       labels:
-        app: adele-proyecto
+        app: rihanna-proyecto
     spec:
       containers:
-      - name: adele-proyecto
-        image: vincenup/adele_app:v7
+      - name: rihanna-proyecto
+        image: vincenup/rihanna-proyecto:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -28,12 +28,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: adele-service
+  name: rihanna-service
   labels:
-    app: adele-proyecto
+    app: rihanna-proyecto
 spec:
   selector:
-    app: adele-proyecto
+    app: rihanna-proyecto
   type: NodePort
   ports:
     - port: 8080
