@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: adele-proyecto
-        image: vincenup/adele_app:v5
+        image: vincenup/adele_app:v7
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
